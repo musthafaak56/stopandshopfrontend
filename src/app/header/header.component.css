@@ -1,0 +1,12 @@
+#navbar1{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to right bottom,#4678b0,#4177ac);
+    transition: 1.5s;
+}
+#floatingInputValue{
+    height: 3rem;
+    width: 22rem;
+    align-items:center
+}

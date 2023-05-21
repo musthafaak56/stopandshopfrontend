@@ -1,0 +1,38 @@
+h2{
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    background: url('https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    /* filter: grayscale(2); */
+}
+.main1{
+    background: linear-gradient(to right bottom, #091D36,#145eb9);
+    min-height: 100dvh;
+}
+
+#productImage{
+    height: 250px;
+    width: 100%;
+    padding: 30px;
+    transition: 0.8s;
+}
+.card-body{
+    background-color: #9BC1EE;
+}
+.card-footer{
+    background-color: #9BC1EE;
+
+}
+.card:hover #productImage{
+    transform: scale(1.3);
+    width: 100%;
+    transition: 0.9s;
+}
+#viewbtn{
+    background-color: #091D36;
+}
+#viewbtn:hover{
+    background-color: #598EC2;
+}

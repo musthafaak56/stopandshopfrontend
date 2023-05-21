@@ -1,0 +1,16 @@
+.main1{
+    background: linear-gradient(to right bottom, #091D36,#145eb9);
+    min-height: 100dvh;
+    padding: 3rem;
+}
+
+#box1{
+    background-color: #0B4C84;
+    color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+#productImage{
+    height: 12rem;
+}

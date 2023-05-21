@@ -1,0 +1,57 @@
+<div class="main1">
+
+<!-- empty wishlist -->
+ <div class="container" id="box1" *ngIf="wishproducts.lenght==0">
+
+        <h2 class="text-center">Your Wishlist is Empty</h2>
+        <div class="row pt-5 d-flex justify-content-center" id="row1">
+           
+            <div class="col-md-7 d-flex justify-content-center">
+                <img id="boximage" width="50%" src="https://www.pngjoy.com/pngl/288/5479292_empty-tomb-empty-clipart-hd-png-download.png" alt="">
+            </div>
+
+        </div>
+        <hr>
+        <div class="row d-flex justify-content-center" id="row1">
+           
+            <div class="col-md-6 d-flex justify-content-center">
+                <a class="btn btn-transparent btn-outline-light">Back to Shopping</a>
+            </div>
+
+        </div>
+        
+</div>
+
+ <!-- wishlist with content -->
+ <!-- Section-->
+ <section class="py-2" *ngIf="wishproducts.lenght!=0">
+    <h3 class="text-center text-light">Your Wishlist</h3>
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let item of wishproducts | filter:searchTerm:'title'">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img id="productImage" class="card-img-top" [src]="item.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{item.title}}</h5>
+                            <!-- Product price-->
+                            ${{item.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="/products/viewproducts/{{item.id}}">View Product</a></div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a (click)="addtocart(item)" id="addtocart" class="btn btn-transparent btn-outline-success me-2"> <i class="fa-solid fa-cart-shopping fa-beat"></i> </a>
+                        <a (click)="removeFromWishlist(item.id)" id="removeWish" class="btn btn-transparent btn-outline-danger ms-2"> <i class="fa-solid fa-trash fa-beat"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>

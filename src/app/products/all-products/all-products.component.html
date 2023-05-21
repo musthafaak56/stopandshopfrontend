@@ -1,0 +1,45 @@
+ <!-- Header-->
+ <header class="banner bg-dark py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="text-center text-white py-5">
+            <h1 class="display-4 fw-bolder">Stop & Shop</h1>
+            <p class="lead fw-normal text-white-50">Your one-stop-shop online.</p>
+        </div>
+    </div>
+</header>
+  <!-- Section-->
+  <section class="">
+<div class="main1">
+
+
+    <div class="container px-4 px-lg-5 pt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let product of allproducts | filter:searchTerm:'title'">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img id="productImage" class="card-img-top" [src]="product.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.title}}</h5>
+                            <!-- Product price-->
+                            ${{product.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer pt-0 border-top-0">
+                        <div class="text-center"><a id="viewbtn" class="btn btn-primary btn-outline-light rounded-pill mt-auto" routerLink="/products/viewproducts/{{product.id}}">View Product</a></div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a class="btn btn-light btn-outline-danger me-2 fs-5"> <i class="fa-solid fa-heart fa-beat"></i> </a>
+                        <a (click)="addtocart(product)" class="btn btn-light btn-outline-success ms-2 fs-5"> <i class="fa-solid fa-cart-shopping fa-beat"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+
+
+           
